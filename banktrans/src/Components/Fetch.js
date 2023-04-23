@@ -13,12 +13,21 @@ function Fetch(){
         .then(data =>{
             setColumn(Object.keys(data.transactions[0]))
             setRecords(data.transactions)
-
-        })
+            })
     }, [])
       
     return(
         <div>
+            <table slassName="table">
+                <thead>
+                    <tr>
+                        {column.map((c, i)=>(
+                            <th key={i}>{c}</th>
+                        ))}
+                    </tr>
+
+                </thead>
+            </table>
 
         </div>
     )
