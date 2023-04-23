@@ -25,6 +25,7 @@ function Fetch(){
       
     return(
         <div>
+            {/* seach bar */}
             <input type="text" placeholder='Search...' className='search' 
             onChange={e=>setQuery(e.target.value)}/>
             <table className="table">
