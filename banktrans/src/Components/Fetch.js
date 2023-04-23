@@ -8,6 +8,10 @@ function Fetch(){
     // setting useState variable
     const [column, setColumn] = useState([])
     const [records, setRecords] = useState([])
+    // variables for search.
+    const [query, setQuery] = useState("")
+
+    console.log(query)
 
     //   fetching data from api
     useEffect(() => {
@@ -21,7 +25,10 @@ function Fetch(){
       
     return(
         <div>
+            <input type="text" placeholder='Search...' className='search' 
+            onChange={e=>setQuery(e.target.value)}/>
             <table className="table">
+                
                 <thead>
                     <tr>
                         {/* mapping data from column */}
@@ -34,7 +41,9 @@ function Fetch(){
                 </thead>
                 <tbody>
                     {
-                       records.map((record, i)=>(
+                        // filter function and mapping.
+                       records.filter(record=>record.description.toLowerCase().includes(query)
+                       ).map((record, i)=>(
                         <tr key={i}>
                             <td>{record.id}</td>
                             <td>{record.date}</td>
