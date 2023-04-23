@@ -26,6 +26,7 @@ function Fetch(){
                         {/* mapping data from column */}
                         {column.map((c, i)=>(
                             <th key={i}>{c}</th>
+                            
                         ))}
                     </tr>
 
@@ -39,6 +40,10 @@ function Fetch(){
                             <td>{record.description}</td>
                             <td>{record.category}</td>
                             <td>{record.amount}</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
                         </tr>
                        )) 
                     }
