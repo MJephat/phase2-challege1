@@ -50,7 +50,48 @@ function Fetch(){
                 </tbody>
             </table>
 
+            <AddList setRecords={setRecords}/>
+
         </div>
     )
 }
+
+
+function AddList({setRecords}){
+    function handleSubmit(e){
+        e.preventDefault();
+        // grab the values in the form
+        const date = e.target.elements.date.value;
+        const description = e.target.elements.description.value;
+        const category = e.target.elements.category.value;
+        const amount = e.target.elements.amount.value;
+        // create another object
+        const newTransaction ={
+            id:"15",
+            date,
+            description,
+            category,
+            amount
+        }
+        setRecords((prevRecords)=>{
+            return prevRecords.concat(newTransaction)
+        })
+
+    }
+    return(
+        <form className="addForm" onSubmit={handleSubmit} >
+        <input type="date" name="date" placeholder="Enter date"/>
+        <input type="text" name="description" placeholder="Enter description"/>
+        <input type="text" name="category" placeholder="Enter category"/>
+        <input type="amount" name="amount" placeholder="Enter amount"/>
+        <button type="submit">Add</button>
+
+
+
+
+    </form>
+    )
+}
+
+
 export default Fetch;

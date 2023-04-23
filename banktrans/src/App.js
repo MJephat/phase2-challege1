@@ -8,8 +8,8 @@ import AddForm from './Components/AddForm';
 function App() {
   return (
     <div className="App">
-   <Fetch/>
-   <AddForm/>
+   <Fetch />
+   {/* <AddForm /> */}
       
     </div>
   );
