@@ -11,6 +11,8 @@ function Fetch(){
         fetch('http://localhost:3000/transactions')
         .then(resp => resp.json)
         .then(data =>{
+            setColumn(Object.keys(data.transactions[0]))
+            setRecords(data.transactions)
 
         })
     }, [])
