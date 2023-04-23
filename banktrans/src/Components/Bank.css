@@ -1,0 +1,25 @@
+.table{
+    width:85%;
+    background-color:rgb(200, 165, 165);
+    height: fit-content;
+}
+
+#edit,  #submit{
+    background-color: rgb(72, 214, 115);
+}
+
+#delete{
+    background-color: rgb(216, 92, 92);
+}
+.addForm{
+    display:inline-block;
+}
+
+/* input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+  } */

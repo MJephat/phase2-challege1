@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import './Bank.css'
 
 function Fetch(){
     // setting useState variable
@@ -41,8 +42,8 @@ function Fetch(){
                             <td>{record.category}</td>
                             <td>{record.amount}</td>
                             <td>
-                                <button>Edit</button>
-                                <button>Delete</button>
+                                <button id="edit">Edit</button>
+                                <button id="delete">Delete</button>
                             </td>
                         </tr>
                        )) 
@@ -84,7 +85,7 @@ function AddList({setRecords}){
         <input type="text" name="description" placeholder="Enter description"/>
         <input type="text" name="category" placeholder="Enter category"/>
         <input type="amount" name="amount" placeholder="Enter amount"/>
-        <button type="submit">Add</button>
+        <button id="submit">Add</button>
 
 
 
