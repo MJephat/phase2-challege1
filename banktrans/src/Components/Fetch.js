@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -69,6 +69,11 @@ function Fetch(){
 
 
 function AddList({setRecords}){
+    const dateRef = useRef()
+    const descriptionRef = useRef()
+    const categoryRef = useRef()
+    const amountRef = useRef()
+
     function handleSubmit(e){
         e.preventDefault();
         // grab the values in the form
@@ -87,14 +92,18 @@ function AddList({setRecords}){
         setRecords((prevRecords)=>{
             return prevRecords.concat(newTransaction)
         })
+        dateRef.current.value =""
+        descriptionRef.current.value =""
+        categoryRef.current.value =""
+        amountRef.current.value =""
 
     }
     return(
         <form className="addForm" onSubmit={handleSubmit} >
-        <input type="date" name="date" placeholder="Enter date"/>
-        <input type="text" name="description" placeholder="Enter description"/>
-        <input type="text" name="category" placeholder="Enter category"/>
-        <input type="amount" name="amount" placeholder="Enter amount"/>
+        <input type="date" name="date" placeholder="Enter date" ref={dateRef}/>
+        <input type="text" name="description" placeholder="Enter description" ref={descriptionRef}/>
+        <input type="text" name="category" placeholder="Enter category" ref={categoryRef}/>
+        <input type="amount" name="amount" placeholder="Enter amount" ref={amountRef}/>
         <button id="submit">Add</button>
 
 
