@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import './Bank.css';
 
+// function for editing components
 function EditTransaction({ transaction, onEdit }) {
+    // useState variables.
   const [date, setDate] = useState(transaction.date);
   const [description, setDescription] = useState(transaction.description);
   const [category, setCategory] = useState(transaction.category);
