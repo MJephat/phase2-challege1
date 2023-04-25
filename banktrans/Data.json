@@ -119,6 +119,13 @@
       "category": "Festive Season",
       "amount": "500000",
       "id": 17
+    },
+    {
+      "date": "2023-04-24",
+      "description": "school",
+      "category": "MOringa",
+      "amount": "200000",
+      "id": 18
     }
   ]
 }
