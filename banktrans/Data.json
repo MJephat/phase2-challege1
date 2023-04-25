@@ -6,7 +6,7 @@
       "description": "Paycheck from Bob's Burgers",
       "category": "Income",
       "amount": 1000,
-      "action":""
+      "action": ""
     },
     {
       "id": 2,
@@ -98,8 +98,27 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
+    },
+    {
+      "id": 15,
+      "date": "2022-12-04",
+      "description": "donations",
+      "category": "Streets",
+      "amount": 84.57
+    },
+    {
+      "id": 16,
+      "date": "2023-01-05",
+      "description": "bike riding",
+      "category": "outdoor activities",
+      "amount": 8498
+    },
+    {
+      "date": "52023-12-25",
+      "description": "Christmas",
+      "category": "Festive Season",
+      "amount": "500000",
+      "id": 17
     }
   ]
- }
- 
- 
+}
