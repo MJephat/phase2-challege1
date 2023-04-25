@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 
 
@@ -41,7 +42,7 @@ function AddTransaction() {
       <input type="text" value={category} placeholder="Category" onChange={(e) => setCategory(e.target.value)}/>
       <input type="number" value={amount} placeholder="Amount" onChange={(e) => setAmount(e.target.value)}/>
 
-      <button type="submit">Add Here</button>
+      <button type="submit" id="submit">Submit</button>
     </form>
   );
 }

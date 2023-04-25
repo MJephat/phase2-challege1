@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
 import EditTransaction from "./EditTable";
+import './Bank.css';
 
 
 
@@ -44,7 +46,7 @@ function TransactionTable() {
 
 
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
             <th>Date</th>
@@ -69,8 +71,8 @@ function TransactionTable() {
       onEdit={handleUpdate}
       onCancel={() => setEditId(null)}
     />
-  ) : ( <button className="edit-btn" onClick={()=> setEditId(transaction.id)}> Edit </button>)}
-         <button className="delete-btn" onClick={()=> handleDelete(transaction.id)}> Delete </button>
+  ) : ( <button id="edit" onClick={()=> setEditId(transaction.id)}> Edit </button>)}
+         <button id="delete" onClick={()=> handleDelete(transaction.id)}> Delete </button>
         </td>
        </tr>
      ))}

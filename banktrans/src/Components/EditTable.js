@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Bank.css';
 
 function EditTransaction({ transaction, onEdit }) {
   const [date, setDate] = useState(transaction.date);
@@ -22,12 +23,12 @@ function EditTransaction({ transaction, onEdit }) {
 
   return (
     <form onSubmit={handleSubmit}>
-    <label>Date:<input type="date" value={date} onChange={(e) => setDate(e.target.value)}/></label>
-    <label>Description:<input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/></label>
-    <label>Category:<input type="text" value={category} onChange={(e) => setCategory(e.target.value)}/></label>
-    <label>Amount:<input type="number" value={amount} onChange={(e) => setAmount(e.target.value)}/></label>
+    <input type="date" value={date} onChange={(e) => setDate(e.target.value)}/>
+    <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
+    <input type="text" value={category} onChange={(e) => setCategory(e.target.value)}/>
+    <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)}/>
     
-    <button type="submit">Save</button>
+    <button type="submit" id="submit">submit</button>
     </form>
   );
 }
