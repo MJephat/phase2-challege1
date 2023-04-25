@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
 import EditTransaction from "./EditTable";
 import './Bank.css';
@@ -9,6 +8,9 @@ import './Bank.css';
 function TransactionTable() {
   const [transactions, setTransactions] = useState([]);
   const [editId, setEditId] = useState(null);
+  const [query, setQuery] = useState("")
+
+  console.log(query)
 
   useEffect(() => {
     fetch("http://localhost:3004/transactions")
@@ -46,6 +48,10 @@ function TransactionTable() {
 
 
   return (
+    <div>
+            {/* seach bar */}
+    <input type="text" placeholder='Search.' className='search' onChange={e=>setQuery(e.target.value)}/>
+       
     <table className="table">
       <thead>
         <tr>
@@ -53,11 +59,13 @@ function TransactionTable() {
             <th>Description</th>
             <th>Category</th>
             <th>Amount</th>
+            <th> Action</th>
           
         </tr>
       </thead>
       <tbody>
-        {transactions.map((transaction) => (
+        {transactions.filter(transaction=>transaction.description.toLowerCase().includes(query)
+                       ).map((transaction) => (
           <tr key={transaction.id}>
         
             <td>{transaction.date}</td>
@@ -78,6 +86,7 @@ function TransactionTable() {
      ))}
     </tbody>
 </table>
+</div>
   );
 }
 export default TransactionTable;

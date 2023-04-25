@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './Bank.css';
 
 function EditTransaction({ transaction, onEdit }) {
@@ -7,16 +6,19 @@ function EditTransaction({ transaction, onEdit }) {
   const [description, setDescription] = useState(transaction.description);
   const [category, setCategory] = useState(transaction.category);
   const [amount, setAmount] = useState(transaction.amount)
+//   const [query, setQuery] = useState("")
 
 
   function handleSubmit(e) {
     e.preventDefault();
     const updatedTransaction= {
+    
       ...transaction,
       date,
       description,
       category,
       amount
+
     };
     onEdit(updatedTransaction);
   }
