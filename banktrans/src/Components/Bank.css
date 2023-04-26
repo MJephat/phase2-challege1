@@ -8,6 +8,10 @@ body{
     height: fit-content;
 }
 
+.table tr{
+  height: 35px;
+}
+
 #edit,  #submit{
     background-color: rgb(72, 214, 115);
 }

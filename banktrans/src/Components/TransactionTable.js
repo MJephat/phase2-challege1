@@ -15,7 +15,7 @@ function TransactionTable() {
   console.log(query)
 // fetching data using UseEffect from the API
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/MJephat/phase2-challege1/transactions")
+    fetch("https://transaction-details.onrender.com/transactions")
       .then((res) => res.json())
       .then((transactions) => setTransactions(transactions));
 
@@ -23,7 +23,7 @@ function TransactionTable() {
 
 // function for Delete from the API by id
   function handleDelete(id) {
-    fetch(`https://my-json-server.typicode.com/MJephat/phase2-challege1/transactions/${id}`, {
+    fetch(`https://transaction-details.onrender.com/transactions/${id}`, {
       method: "DELETE",
     })
       .then((res) => {

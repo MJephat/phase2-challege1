@@ -19,7 +19,7 @@ function AddTransaction() {
     };
 
     // the post function that allows update in the json (API)
-    fetch("https://my-json-server.typicode.com/MJephat/phase2-challege1/transactions", {
+    fetch("https://transaction-details.onrender.com/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -40,7 +40,7 @@ function AddTransaction() {
   }
   return (
     // form for submitting new transactions
-    <form onSubmit={handleSubmit} className="addForm">
+    <form onSubmit= {handleSubmit} className="addForm">
       <input type="date" value={date} placeholder="Date" onChange={(e) => setDate(e.target.value)}/>  
       <input type="text" value={description} placeholder="Description" onChange={(e) => setDescription(e.target.value)}/>
       <input type="text" value={category} placeholder="Category" onChange={(e) => setCategory(e.target.value)}/>
