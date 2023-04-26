@@ -5,25 +5,13 @@ components on a web app and design the UI (User interface) as well
 as performing some functions like live_search, edit (update), delete and add.
 Basically was testing CRUD. Create, Read, Update and Delete.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-
-### `npm test`
-
-No tests were set to be run because this was an application that was to be created from scratch.
 
 
 ### Code features
 
-The projects consist of many components. App.js is th main component and all the components are imported there. Other components are TransctionTable.js for rendering fetched data,EditTable.js for editing data, Nav.js for navigation,Footer.js for footer and Bank.css for styling.
+The projects consist of many components. App.js is th main component and all the components 
+are imported there. Other components are TransctionTable.js for rendering fetched data,EditTable.js 
+for editing data, Nav.js for navigation,Footer.js for footer and Bank.css for styling.
 
 ### Technologies used.
 the Project uswe React and css.
