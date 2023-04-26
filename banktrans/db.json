@@ -126,6 +126,13 @@
       "category": "MOringa",
       "amount": "200000",
       "id": 18
+    },
+    {
+      "date": "1945-03-23",
+      "description": "Cold war",
+      "category": "Economic blow",
+      "amount": "234400000",
+      "id": 19
     }
   ]
 }
