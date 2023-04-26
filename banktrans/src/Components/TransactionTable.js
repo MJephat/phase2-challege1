@@ -15,7 +15,7 @@ function TransactionTable() {
   console.log(query)
 // fetching data using UseEffect from the API
   useEffect(() => {
-    fetch("http://localhost:3004/transactions")
+    fetch("https://my-json-server.typicode.com/MJephat/phase2-challege1/transactions")
       .then((res) => res.json())
       .then((transactions) => setTransactions(transactions));
 
@@ -23,7 +23,7 @@ function TransactionTable() {
 
 // function for Delete from the API by id
   function handleDelete(id) {
-    fetch(`http://localhost:3004/transactions/${id}`, {
+    fetch(`https://my-json-server.typicode.com/MJephat/phase2-challege1/transactions/${id}`, {
       method: "DELETE",
     })
       .then((res) => {

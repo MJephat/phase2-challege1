@@ -19,7 +19,7 @@ function AddTransaction() {
     };
 
     // the post function that allows update in the json (API)
-    fetch("http://localhost:3004/transactions", {
+    fetch("https://my-json-server.typicode.com/MJephat/phase2-challege1/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
