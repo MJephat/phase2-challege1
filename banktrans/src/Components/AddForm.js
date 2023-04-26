@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../App.css';
 
 
-function AddTransaction({transactions}) {
+function AddTransaction(transactions) {
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
@@ -13,6 +13,7 @@ function AddTransaction({transactions}) {
   function handleSubmit(e) {
     e.preventDefault();
     const newTransaction = {
+      ...AddTransaction,
       date,
       description,
       category,

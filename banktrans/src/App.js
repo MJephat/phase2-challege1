@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import AddTransaction from './Components/AddForm';
 import TransactionTable from './Components/TransactionTable';
 import Nav from './Components/Nav';
