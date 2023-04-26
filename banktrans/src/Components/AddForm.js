@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import '../App.css';
 
 
-function AddTransaction() {
+function AddTransaction({transactions}) {
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
+  const [transactions, setTransactions] = useState([]);
 
 //   function to listent to the event submit and add new list on the UI
   function handleSubmit(e) {
@@ -32,7 +33,8 @@ function AddTransaction() {
       body: JSON.stringify(newTransaction)
     })
       .then(res => res.json())
-      .then(() => {
+      .then((transactions) => {
+        setTransactions(transactions);
 
         alert("Transaction ++");
         
