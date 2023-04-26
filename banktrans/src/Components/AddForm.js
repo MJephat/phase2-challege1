@@ -46,7 +46,7 @@ function AddTransaction() {
       <input type="text" value={category} placeholder="Category" onChange={(e) => setCategory(e.target.value)}/>
       <input type="number" value={amount} placeholder="Amount" onChange={(e) => setAmount(e.target.value)}/>
 
-      <button type="submit" id="submit">Submit</button>
+      <button type="submit" id="submit">ADD</button>
     </form>
   );
 }
