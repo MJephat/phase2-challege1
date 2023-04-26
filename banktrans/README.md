@@ -16,6 +16,9 @@ for editing data, Nav.js for navigation,Footer.js for footer and Bank.css for st
 ### Technologies used.
 the Project uswe React and css.
 
+### live link
+https://phase2-challege1.vercel.app/
+
 
 ### Installation
 1. creating react application by running: npx create-react-app /name of the application/
