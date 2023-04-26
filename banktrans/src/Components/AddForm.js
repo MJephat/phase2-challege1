@@ -9,8 +9,8 @@ function AddTransaction() {
   const [amount, setAmount] = useState("");
 
 //   function to listent to the event submit and add new list on the UI
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit(e) {
+    e.preventDefault();
     const newTransaction = {
       date,
       description,
