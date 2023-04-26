@@ -16,7 +16,12 @@ function AddTransaction() {
       description,
       category,
       amount
-    };
+    }
+    setDate("");
+    setDescription("");
+    setCategory("");
+    setAmount("");
+  };
 
     // the post function that allows update in the json (API)
     fetch("https://my-json-server.typicode.com/MJephat/phase2-challege1/transactions", {
@@ -31,10 +36,7 @@ function AddTransaction() {
 
         alert("Transaction ++");
         
-        setDate("");
-        setDescription("");
-        setCategory("");
-        setAmount("");
+       
       })
       .catch(error => console.error(error));
   }
@@ -49,5 +51,5 @@ function AddTransaction() {
       <button type="submit" id="submit">Submit</button>
     </form>
   );
-}
+
 export default AddTransaction;
