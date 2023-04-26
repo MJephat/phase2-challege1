@@ -2,28 +2,21 @@ import React, { useState } from "react";
 import '../App.css';
 
 
-function AddTransaction(transactions) {
+function AddTransaction() {
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
-  const [transactions, setTransactions] = useState([]);
 
 //   function to listent to the event submit and add new list on the UI
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
     const newTransaction = {
-      ...AddTransaction,
       date,
       description,
       category,
       amount
-    }
-    setDate("");
-    setDescription("");
-    setCategory("");
-    setAmount("");
-  ;
+    };
 
     // the post function that allows update in the json (API)
     fetch("https://my-json-server.typicode.com/MJephat/phase2-challege1/transactions", {
@@ -34,12 +27,14 @@ function AddTransaction(transactions) {
       body: JSON.stringify(newTransaction)
     })
       .then(res => res.json())
-      .then((transactions) => {
-        setTransactions(transactions);
+      .then(() => {
 
-        alert("Transaction ++");
+        console.log("Transaction ++");
         
-       
+        setDate("");
+        setDescription("");
+        setCategory("");
+        setAmount("");
       })
       .catch(error => console.error(error));
   }
@@ -54,5 +49,5 @@ function AddTransaction(transactions) {
       <button type="submit" id="submit">Submit</button>
     </form>
   );
-  }
+}
 export default AddTransaction;
