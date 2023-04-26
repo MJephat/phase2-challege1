@@ -21,29 +21,27 @@ The page will reload when you make changes.\
 No tests were set to be run because this was an application that was to be created from scratch.
 
 
+### Code features
+
+The projects consist of many components. App.js is th main component and all the components are imported there. Other components are TransctionTable.js for rendering fetched data,EditTable.js for editing data, Nav.js for navigation,Footer.js for footer and Bank.css for styling.
+
+### Technologies used.
+the Project uswe React and css.
 
 
+### Installation
+1. creating react application by running: npx create-react-app /name of the application/
+2. starting tha json server: json-server --watch db.json
+3. npm start to start the application. 
 
-### Code Splitting
-
-The projects consist of many components
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Contributors
+The project was developed by Jephat M. Maina guided by instruction from Flatiron School.Any contributors are welcome to contribute to the project.if you would like to contribute to this project submit a pull request.
 
 ### Deployment
+### LIcence 
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
