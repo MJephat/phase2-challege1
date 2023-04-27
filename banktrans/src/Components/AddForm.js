@@ -29,7 +29,7 @@ function AddTransaction() {
       .then(res => res.json())
       .then(() => {
 
-        console.log("Transaction ++");
+        // console.log("Transaction ++");
         
         setDate("");
         setDescription("");

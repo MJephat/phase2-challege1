@@ -28,7 +28,7 @@ function TransactionTable() {
     })
       .then((res) => {
         if (res.ok) {
-          alert("Are you sure you want to delete this transaction?");
+          // alert("Are you sure you want to delete this transaction?");
           setTransactions(transactions.filter((rem) => rem.id !== id));
         } else {
           throw new Error("Event couldn't be completed");

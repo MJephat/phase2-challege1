@@ -14,7 +14,8 @@ are imported there. Other components are TransctionTable.js for rendering fetche
 for editing data, Nav.js for navigation,Footer.js for footer and Bank.css for styling.
 
 ### Technologies used.
-the Project uswe React and css.
+the Project used React and css.
+
 
 ### live link
 https://phase2-challege1.vercel.app/
